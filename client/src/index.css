@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'EB Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --color-sahara-50: #faf5ee;
+  --color-sahara-100: #f6f0e8;
+  --color-sahara-200: #f2ece4;
+  --color-sahara-300: #ece6dc;
+  --color-sahara-400: #e6e0d6;
+  --color-sahara-500: #dcd6cc;
+  --color-sahara-600: #d8d0c8;
+  --color-sahara-700: #cec6be;
+  --color-sahara-800: #9a9088;
+  --color-sahara-900: #605850;
+  --color-sahara-950: #3a302a;
+
+  --color-sienna-400: #f0a878;
+  --color-sienna-500: #e08850;
+  --color-sienna-600: #c2652a;
+  --color-sienna-700: #8a4518;
+  --color-sienna-800: #401a08;
+
+  --color-rose-400: #e8a0a0;
+  --color-rose-500: #d47070;
+  --color-rose-600: #8c3c3c;
+  --color-rose-700: #6e3030;
+
+  --color-error: #c0392b;
+  --color-error-light: #fce4e0;
+
+  --color-success: #27ae60;
+  --color-success-light: #e0f5ea;
+
+  --shadow-sahara: 0 2px 16px rgba(58, 48, 42, 0.04);
+  --shadow-sahara-md: 0 4px 24px rgba(58, 48, 42, 0.08);
+  --shadow-sahara-lg: 0 8px 40px rgba(58, 48, 42, 0.12);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-sahara-50);
+    color: var(--color-sahara-950);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-sahara-950);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: var(--font-body);
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+  }
+
+  ::selection {
+    background-color: var(--color-sienna-400);
+    color: var(--color-sahara-950);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sahara-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sahara-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sahara-800);
+}
+
+/* Toast animations */
+@keyframes toast-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes toast-out {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+.toast-enter {
+  animation: toast-in 0.3s ease-out forwards;
+}
+
+.toast-exit {
+  animation: toast-out 0.3s ease-in forwards;
+}
+
+/* Page transition */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fade-in 0.4s ease-out forwards;
+}

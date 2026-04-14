@@ -1,0 +1,144 @@
+.cdm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.cdm-card {
+  width: 760px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* Edit modal overlay styling (shared) */
+.edit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1250;
+}
+
+.edit-modal-overlay .add-contact-container {
+  max-width: 720px;
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.cdm-header {
+  background: linear-gradient(90deg,#334155,#1f2937);
+  color: #fff;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cdm-body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cdm-left {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
+.cdm-right {
+  flex: 1;
+}
+
+.cdm-name {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.cdm-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.cdm-info li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+}
+
+.cdm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cdm-edit {
+  background: #0ea5a4;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cdm-delete {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cdm-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 0;
+}

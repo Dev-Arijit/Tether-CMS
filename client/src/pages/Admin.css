@@ -1,0 +1,55 @@
+.admin-page {
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+.admin-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.admin-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #f0f0f0;
+}
+
+.admin-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.admin-pagination button {
+    padding: 6px 14px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.admin-pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
