@@ -12,35 +12,35 @@ const seed = async () => {
     console.log('MongoDB Connected for seeding...');
 
     // Create Users
-    const existingUser = await User.findOne({ email: 'john@sahara.com' });
-    const existingAdmin = await User.findOne({ email: 'admin@sahara.com' });
+    const existingUser = await User.findOne({ email: 'john@gmail.com' });
+    const existingAdmin = await User.findOne({ email: 'admin@gmail.com' });
 
     let user, admin;
 
     if (!existingUser) {
       user = await User.create({
         name: 'John Doe',
-        email: 'john@sahara.com',
+        email: 'john@gmail.com',
         password: 'password123',
         role: 'user'
       });
-      console.log('Created user: john@sahara.com');
+      console.log('Created user: john@gmail.com');
     } else {
       user = existingUser;
-      console.log('User john@sahara.com already exists');
+      console.log('User john@gmail.com already exists');
     }
 
     if (!existingAdmin) {
       admin = await User.create({
         name: 'Admin User',
-        email: 'admin@sahara.com',
+        email: 'admin@gmail.com',
         password: 'admin123',
         role: 'admin'
       });
-      console.log('Created admin: admin@sahara.com');
+      console.log('Created admin: admin@gmail.com');
     } else {
       admin = existingAdmin;
-      console.log('Admin admin@sahara.com already exists');
+      console.log('Admin admin@gmail.com already exists');
     }
 
     // Create Contacts for john
@@ -169,7 +169,7 @@ const seed = async () => {
         contacts[i].createdAt = date;
       }
       await Contact.insertMany(contacts);
-      console.log(`Created ${contacts.length} contacts for john@sahara.com`);
+      console.log(`Created ${contacts.length} contacts for john@gmail.com`);
     } else {
       console.log(`User already has ${existingCount} contacts, skipping.`);
     }
@@ -180,11 +180,11 @@ const seed = async () => {
     console.log('\n  Login Credentials:');
     console.log('  ---------------------------------');
     console.log('  Regular User:');
-    console.log('    Email:    john@sahara.com');
+    console.log('    Email:    john@gmail.com');
     console.log('    Password: password123');
     console.log('  ---------------------------------');
     console.log('  Admin User:');
-    console.log('    Email:    admin@sahara.com');
+    console.log('    Email:    admin@gmail.com');
     console.log('    Password: admin123');
     console.log('  ---------------------------------\n');
 
