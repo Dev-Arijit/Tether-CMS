@@ -8,10 +8,14 @@ const router = require('./routes/auth-router');
 
 const app = express();
 
+// Updated server/server.js (I have applied this, please push it!)
 app.use(cors({
-    origin: true,
-    credentials: true
+    origin: ["https://tether-cms.vercel.app", "http://localhost:5173"],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ limit: '5mb', extended: true }));
 
